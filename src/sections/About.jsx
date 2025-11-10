@@ -17,31 +17,28 @@ const About = () => {
   return (
     <SectionWrapper id="about">
       <SectionHeading>About Me</SectionHeading>
+
+      {/* - Changed 'text-center' to 'text-left' for readability.
+        - Changed 'max-w-3xl' to 'max-w-2xl' for better line length.
+      */}
       <motion.div
-        className="max-w-3xl mx-auto text-lg text-gray-300 space-y-6 text-center"
+        className="max-w-2xl mx-auto text-left text-xl text-gray-300 leading-relaxed space-y-6"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
         <p>
-          Hello! I'm Jaime, a passionate full-stack developer with a love for
-          creating clean, performant, and user-friendly web applications. My
-          journey in tech started with a curiosity for how things work, and it
-          has evolved into a full-fledged passion for building digital
-          solutions.
+          I'm Jaime, a full-stack developer focused on building clean and
+          efficient web applications.
         </p>
         <p>
-          I specialize in the MERN stack (MongoDB, Express, React, Node.js) and
-          have strong experience with SQL databases like PostgreSQL. From
-          crafting responsive UIs with React and Tailwind to building robust
-          APIs with Node.js and Express, I enjoy tackling challenges across the
-          entire stack.
+          I enjoy the process of turning an idea into a functional product,
+          focusing on readable code and scalable architecture.
         </p>
         <p>
-          When I'm not coding, you can find me exploring new technologies,
-          contributing to open-source projects, or enjoying a good cup of
-          coffee.
+          I am committed to continuously learning new technologies and improving
+          my skillset.
         </p>
       </motion.div>
     </SectionWrapper>
