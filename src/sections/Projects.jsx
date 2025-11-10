@@ -4,14 +4,13 @@ import SectionWrapper from "../components/SectionWrapper";
 import SectionHeading from "../components/SectionHeading";
 import ProjectCard from "../components/ProjectCard";
 import webPage from "../assets/raquel-web.jpg";
-import { Github, ArrowUpRight } from "lucide-react";
 import ProjectCardNoRepo from "../components/ProjectCardNoRepo";
 
 const projectsNoRepo = [
   {
     title: "Raquel Tax Services",
     description:
-      "A full-stack web application developed for Raquel Tax Services to streamline their appointment booking process. Clients can register, view available times, and book appointments online. Administrators have a dedicated dashboard to manage bookings, set availability, and view client details, with automatic Google Calendar synchronization for confirmed appointments.",
+      "Client-facing tax services website with appointment booking, client document collection, and admin dashboard. Live production site for a small business.",
     imageUrl: webPage,
     tech: [
       "React",
@@ -21,33 +20,17 @@ const projectsNoRepo = [
       "React Router",
       "Tailwind CSS",
       "Framer Motion",
-      "etc.",
     ],
     liveUrl: "https://raqueltaxservices.org/",
-    repoUrl: "https://github.com/JaimeDevz",
+    repoUrl: null, // Private repo
+    highlights: [
+      "Built and deployed a production site for a local tax business",
+      "Integrated Google Workspace for secure document workflows",
+      "Responsive design and performance optimizations with Vite/Tailwind",
+    ],
+    contactForCode: true,
   },
 ];
-
-// const projects = [
-//   {
-//     title: "Raquel Tax Services",
-//     description:
-//       "A full-stack web application developed for Raquel Tax Services to streamline their appointment booking process. Clients can register, view available times, and book appointments online. Administrators have a dedicated dashboard to manage bookings, set availability, and view client details, with automatic Google Calendar synchronization for confirmed appointments.",
-//     imageUrl: webPage,
-//     tech: [
-//       "React",
-//       "Node.js",
-//       "Express",
-//       "PostgreSQL",
-//       "React Router",
-//       "Tailwind CSS",
-//       "Framer Motion",
-//       "etc.",
-//     ],
-//     liveUrl: "https://raqueltaxservices.org/",
-//     repoUrl: "https://github.com/JaimeDevz",
-//   },
-// ];
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -70,12 +53,13 @@ const Projects = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {projectsNoRepo.map((project, index) => (
-          <ProjectCardNoRepo key={index} project={project} />
-        ))}
-        {/* {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))} */}
+        {projectsNoRepo.map((project, index) =>
+          project.repoUrl ? (
+            <ProjectCard key={index} project={project} />
+          ) : (
+            <ProjectCardNoRepo key={index} project={project} />
+          )
+        )}
       </motion.div>
     </SectionWrapper>
   );

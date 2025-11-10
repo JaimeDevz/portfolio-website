@@ -51,7 +51,7 @@ const Navbar = () => {
                 e.preventDefault();
                 smoothScroll("home");
               }}
-              className="text-2xl font-bold text-cyan-400"
+              className="text-2xl font-bold text-white"
             >
               Jaime Torres
             </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => smoothScroll(link.id)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium"
               >
                 {link.name}
               </button>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-cyan-400 p-2"
+              className="text-gray-300 hover:text-white p-2"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -104,7 +104,7 @@ const Navbar = () => {
                     delay: 0.1 + navLinks.indexOf(link) * 0.05,
                   }}
                   onClick={() => smoothScroll(link.id)}
-                  className="text-3xl font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
+                  className="text-3xl font-semibold text-gray-200 hover:text-white transition-colors duration-200"
                 >
                   {link.name}
                 </motion.button>

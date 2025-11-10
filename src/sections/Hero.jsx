@@ -19,7 +19,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Hi, I'm <span className="text-cyan-400">Jaime Torres</span>.
+          Hi, I'm <span className="text-white">Jaime Torres</span>.
         </motion.h1>
         <motion.p
           className="text-xl md:text-2xl text-gray-300 mb-8"
@@ -37,11 +37,12 @@ const Hero = () => {
         >
           <motion.button
             onClick={() => smoothScroll("projects")}
-            className="bg-cyan-500 text-white font-semibold px-8 py-3 rounded-md shadow-lg shadow-cyan-500/20 transition-all duration-300"
+            className="bg-white text-gray-900 font-semibold px-8 py-3 rounded-md shadow-lg transition-all duration-300"
             whileHover={{
               scale: 1.05,
               y: -2,
-              boxShadow: "0 10px 20px rgba(6, 182, 212, 0.3)",
+              backgroundColor: "#E5E7EB", // gray-200
+              boxShadow: "0 10px 20px rgba(255, 255, 255, 0.1)",
             }}
             whileTap={{ scale: 0.95 }}
           >
@@ -51,7 +52,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/jaime-torres-2a03a836a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 p-2 transition-colors duration-200"
+            className="text-gray-400 hover:text-white p-2 transition-colors duration-200"
             whileHover={{ scale: 1.1, y: -2 }}
             aria-label="LinkedIn Profile"
           >
@@ -61,7 +62,7 @@ const Hero = () => {
             href="https://github.com/JaimeDevz"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 p-2 transition-colors duration-200"
+            className="text-gray-400 hover:text-white p-2 transition-colors duration-200"
             whileHover={{ scale: 1.1, y: -2 }}
             aria-label="GitHub Profile"
           >

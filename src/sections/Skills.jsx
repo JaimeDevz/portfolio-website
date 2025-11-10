@@ -6,15 +6,36 @@ import { ReactIcon, Html5Icon, Css3Icon } from "../components/SkillIcon";
 import { Code, Server, Database, Wind, Move, Zap } from "lucide-react";
 
 const skills = [
-  { name: "JavaScript (ES6+)", icon: <Code className="w-10 h-10" /> },
-  { name: "React", icon: <ReactIcon className="w-10 h-10" /> },
-  { name: "HTML5", icon: <Html5Icon className="w-10 h-10" /> },
-  { name: "CSS3", icon: <Css3Icon className="w-10 h-10" /> },
-  { name: "Node.js / Express", icon: <Server className="w-10 h-10" /> },
-  { name: "SQL / PostgreSQL", icon: <Database className="w-10 h-10" /> },
-  { name: "Tailwind CSS", icon: <Wind className="w-10 h-10" /> },
-  { name: "Framer Motion", icon: <Move className="w-10 h-10" /> },
-  { name: "Vite", icon: <Zap className="w-10 h-10" /> },
+  {
+    name: "JavaScript (ES6+)",
+    icon: <Code className="w-10 h-10" aria-hidden="true" />,
+  },
+  {
+    name: "React",
+    icon: <ReactIcon className="w-10 h-10" aria-hidden="true" />,
+  },
+  {
+    name: "HTML5",
+    icon: <Html5Icon className="w-10 h-10" aria-hidden="true" />,
+  },
+  { name: "CSS3", icon: <Css3Icon className="w-10 h-10" aria-hidden="true" /> },
+  {
+    name: "Node.js / Express",
+    icon: <Server className="w-10 h-10" aria-hidden="true" />,
+  },
+  {
+    name: "SQL / PostgreSQL",
+    icon: <Database className="w-10 h-10" aria-hidden="true" />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <Wind className="w-10 h-10" aria-hidden="true" />,
+  },
+  {
+    name: "Framer Motion",
+    icon: <Move className="w-10 h-10" aria-hidden="true" />,
+  },
+  { name: "Vite", icon: <Zap className="w-10 h-10" aria-hidden="true" /> },
 ];
 
 const fadeIn = {
@@ -50,10 +71,10 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800/60 focus:outline-none focus:ring-2 focus:ring-cyan-400 translate-z-0"
+            className="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-gray-800/60 focus:outline-none focus:ring-2 focus:ring-white translate-z-0"
             variants={fadeIn}
           >
-            <div className="text-cyan-400 mb-3">{skill.icon}</div>
+            <div className="text-gray-300 mb-3">{skill.icon}</div>
             <h3 className="text-md font-semibold text-gray-100">
               {skill.name}
             </h3>
